@@ -1,0 +1,711 @@
+[
+  {
+    "id": "bb-0379",
+    "name": "Monogram Versailles Tote",
+    "category": "Tote Bags",
+    "subcategory": "Premium Edition",
+    "brand": "Bright Buy Elite",
+    "price": 16800,
+    "originalPrice": 21000,
+    "discountPercent": 20,
+    "rating": 5,
+    "reviewCount": 1,
+    "isNew": true,
+    "isBestSeller": false,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 20,
+    "images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363"
+    ],
+    "colors": [
+      {
+        "name": "Classic Black",
+        "hex": "#1a1a1a"
+      }
+    ],
+    "description": "Handcrafted premium bag designed with attention to durability and contemporary style.",
+    "features": [
+      "Premium reinforced materials",
+      "Smooth gliding heavy-duty zippers",
+      "Water-resistant protective coating",
+      "Signature Bright Buy islandwide guarantee"
+    ],
+    "specs": {
+      "dimensions": "35cm x 26cm x 12cm",
+      "material": "Genuine / Vegan Leather",
+      "weight": "750g",
+      "warranty": "1 Year Islandwide Guarantee"
+    },
+    "tags": [
+      "tote bags",
+      "new",
+      "bags"
+    ]
+  },
+  {
+    "id": "bb-101",
+    "name": "Aura Luxe Italian Leather Handbag",
+    "category": "Handbags",
+    "subcategory": "Shoulder Bags",
+    "brand": "Bright Buy Signature",
+    "price": 18500,
+    "originalPrice": 24500,
+    "discountPercent": 24,
+    "rating": 4.9,
+    "reviewCount": 38,
+    "isNew": true,
+    "isBestSeller": true,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Cognac Brown",
+        "hex": "#8B4513"
+      },
+      {
+        "name": "Noir Black",
+        "hex": "#1a1a1a"
+      },
+      {
+        "name": "Burgundy",
+        "hex": "#800020"
+      }
+    ],
+    "description": "Crafted from full-grain textured leather with polished gold-tone hardware. The Aura Luxe elevates everyday essentials with timeless elegance and structural precision.",
+    "features": [
+      "Genuine full-grain Italian leather",
+      "Detachable & adjustable crossbody strap",
+      "Triple interior compartments with zip dividers",
+      "Protective metal feet at base",
+      "Signature Bright Buy dust bag included"
+    ],
+    "specs": {
+      "dimensions": "32cm (L) x 24cm (H) x 12cm (W)",
+      "material": "Top-grain Cowhide Leather",
+      "weight": "850g",
+      "compartments": "3 main compartments + 2 slip pockets",
+      "closure": "Magnetic snap & zip closure",
+      "warranty": "1 Year Manufacturer Guarantee"
+    },
+    "tags": [
+      "luxury",
+      "leather",
+      "work",
+      "evening",
+      "best seller"
+    ]
+  },
+  {
+    "id": "bb-102",
+    "name": "MetroPro Urban Tech Backpack",
+    "category": "Backpacks",
+    "subcategory": "Laptop Backpacks",
+    "brand": "Bright Buy Gear",
+    "price": 14200,
+    "originalPrice": 17800,
+    "discountPercent": 20,
+    "rating": 4.8,
+    "reviewCount": 52,
+    "isNew": true,
+    "isBestSeller": true,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 24,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Stealth Charcoal",
+        "hex": "#2c3437"
+      },
+      {
+        "name": "Navy Blue",
+        "hex": "#1d2d44"
+      },
+      {
+        "name": "Olive Green",
+        "hex": "#3d5a45"
+      }
+    ],
+    "description": "The ultimate everyday commuter backpack engineered for tech professionals and students. Features waterproof ballistic nylon, a dedicated 16-inch padded laptop pocket, and an integrated USB charging port.",
+    "features": [
+      "Fits laptops up to 16 inches + tablet sleeve",
+      "Water-repellent 900D Oxford nylon exterior",
+      "Concealed anti-theft back pocket for passport/wallet",
+      "Ergonomic airflow back padding & chest buckle",
+      "Luggage strap for effortless travel stacking"
+    ],
+    "specs": {
+      "dimensions": "46cm (H) x 31cm (W) x 16cm (D)",
+      "material": "Waterproof Ballistic Nylon & TPU",
+      "weight": "980g",
+      "capacity": "26 Liters",
+      "compartments": "18 dedicated smart organizer pockets",
+      "warranty": "2 Years Islandwide Warranty"
+    },
+    "tags": [
+      "backpack",
+      "laptop",
+      "tech",
+      "waterproof",
+      "office"
+    ]
+  },
+  {
+    "id": "bb-103",
+    "name": "Riviera Canvas & Leather Work Tote",
+    "category": "Tote Bags",
+    "subcategory": "Work Totes",
+    "brand": "Bright Buy Signature",
+    "price": 11500,
+    "originalPrice": 14500,
+    "discountPercent": 21,
+    "rating": 4.7,
+    "reviewCount": 29,
+    "isNew": false,
+    "isBestSeller": true,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 18,
+    "images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Cream & Tan",
+        "hex": "#e3dac9"
+      },
+      {
+        "name": "Classic Black",
+        "hex": "#222222"
+      },
+      {
+        "name": "Olive Canvas",
+        "hex": "#556b2f"
+      }
+    ],
+    "description": "The Riviera Tote effortlessly combines heavy-duty organic cotton canvas with premium saddle leather trim. Spacious enough for your laptop, notebook, water bottle, and makeup pouch.",
+    "features": [
+      "Heavyweight 16oz organic canvas with leather handles",
+      "Padded laptop divider fits up to 14-inch MacBooks",
+      "Internal drink bottle holder & keychain clasp",
+      "Top zipper closure keeping belongings secure",
+      "Reinforced double-layered bottom panel"
+    ],
+    "specs": {
+      "dimensions": "40cm (L) x 30cm (H) x 14cm (W)",
+      "material": "16oz Organic Canvas + Genuine Saddle Leather",
+      "weight": "720g",
+      "capacity": "18 Liters",
+      "warranty": "1 Year Warranty"
+    },
+    "tags": [
+      "tote",
+      "work",
+      "canvas",
+      "sustainable",
+      "everyday"
+    ]
+  },
+  {
+    "id": "bb-104",
+    "name": "Voyager Weekender Leather Duffle Bag",
+    "category": "Travel Bags",
+    "subcategory": "Duffles & Luggage",
+    "brand": "Bright Buy Heritage",
+    "price": 26900,
+    "originalPrice": 33000,
+    "discountPercent": 18,
+    "rating": 4.9,
+    "reviewCount": 44,
+    "isNew": true,
+    "isBestSeller": false,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 8,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1575883172638-3486be2e8e97?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Vintage Antique Brown",
+        "hex": "#5c4033"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#1b1b1b"
+      }
+    ],
+    "description": "Whether you are catching an island getaway to Bentota or traveling internationally, the Voyager Weekender is your ideal travel companion. Built from thick distressed crazy-horse leather with a separate shoe compartment.",
+    "features": [
+      "Independent ventilated side shoe compartment",
+      "Heavy-duty YKK antique brass zippers",
+      "Padded removable shoulder strap with non-slip pad",
+      "Meets airline cabin overhead carry-on standards",
+      "Waterproof nylon internal lining"
+    ],
+    "specs": {
+      "dimensions": "52cm (L) x 28cm (H) x 26cm (W)",
+      "material": "Full-grain Distressed Cowhide Leather",
+      "weight": "1.7kg",
+      "capacity": "42 Liters",
+      "warranty": "3 Years Islandwide Guarantee"
+    },
+    "tags": [
+      "travel",
+      "duffle",
+      "leather",
+      "weekend",
+      "carry on"
+    ]
+  },
+  {
+    "id": "bb-105",
+    "name": "Celeste Quilted Crossbody Bag",
+    "category": "Handbags",
+    "subcategory": "Crossbody",
+    "brand": "Bright Buy Signature",
+    "price": 9800,
+    "originalPrice": 12500,
+    "discountPercent": 22,
+    "rating": 4.8,
+    "reviewCount": 61,
+    "isNew": false,
+    "isBestSeller": true,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 20,
+    "images": [
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Blush Pink",
+        "hex": "#ffb6c1"
+      },
+      {
+        "name": "Ivory Pearl",
+        "hex": "#fffff0"
+      },
+      {
+        "name": "Jet Black",
+        "hex": "#111111"
+      }
+    ],
+    "description": "Chic chevron-quilted vegan lambskin with an intertwined gold chain strap. Lightweight yet surprisingly roomy for your phone, cardholder, lipstick, and keys.",
+    "features": [
+      "Ultra-soft vegan lambskin with chevron diamond stitch",
+      "Convertible gold chain strap (wear long or double up)",
+      "Rotary turn-lock closure with signature Bright Buy crest",
+      "Dual interior card slots + center zippered pouch"
+    ],
+    "specs": {
+      "dimensions": "21cm (L) x 14cm (H) x 7cm (W)",
+      "material": "Eco-friendly Vegan Leather",
+      "weight": "420g",
+      "strapDrop": "56cm (single) / 32cm (doubled)",
+      "warranty": "6 Months Guarantee"
+    },
+    "tags": [
+      "crossbody",
+      "quilted",
+      "chain",
+      "party",
+      "compact"
+    ]
+  },
+  {
+    "id": "bb-106",
+    "name": "Kensington Executive Leather Briefcase",
+    "category": "Men's Collection",
+    "subcategory": "Briefcases & Messenger",
+    "brand": "Bright Buy Heritage",
+    "price": 22500,
+    "originalPrice": 28000,
+    "discountPercent": 20,
+    "rating": 4.9,
+    "reviewCount": 27,
+    "isNew": true,
+    "isBestSeller": false,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 11,
+    "images": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Oxford Tan",
+        "hex": "#a0522d"
+      },
+      {
+        "name": "Espresso Dark Brown",
+        "hex": "#3b2219"
+      },
+      {
+        "name": "Matte Black",
+        "hex": "#1a1a1a"
+      }
+    ],
+    "description": "Tailored for the contemporary business leader. Structured vegetable-tanned leather briefcase designed with dual document compartments and a dedicated laptop sleeve.",
+    "features": [
+      "Premium vegetable-tanned cowhide leather",
+      "Padded laptop sleeve for 15.6-inch computers",
+      "Smart trolley sleeve on back for travel ease",
+      "Detachable padded shoulder strap",
+      "Brass combination lock latch for maximum security"
+    ],
+    "specs": {
+      "dimensions": "41cm (L) x 30cm (H) x 9cm (W)",
+      "material": "Vegetable Tanned Leather",
+      "weight": "1.3kg",
+      "warranty": "2 Years Warranty"
+    },
+    "tags": [
+      "briefcase",
+      "executive",
+      "mens",
+      "leather",
+      "laptop"
+    ]
+  },
+  {
+    "id": "bb-107",
+    "name": "Nova Anti-Theft Travel Backpack",
+    "category": "Backpacks",
+    "subcategory": "Travel Backpacks",
+    "brand": "Bright Buy Gear",
+    "price": 12800,
+    "originalPrice": 16000,
+    "discountPercent": 20,
+    "rating": 4.7,
+    "reviewCount": 35,
+    "isNew": false,
+    "isBestSeller": false,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 16,
+    "images": [
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Space Grey",
+        "hex": "#4a4e51"
+      },
+      {
+        "name": "Midnight Indigo",
+        "hex": "#1e243b"
+      }
+    ],
+    "description": "Engineered for peace of mind in crowded transit. Hidden zipper design, slash-proof front panel, and RFID blocking pockets ensure your valuables remain safe everywhere.",
+    "features": [
+      "Concealed rear main zipper opening",
+      "Slash-resistant woven composite layers",
+      "RFID blocking passport and credit card slots",
+      "Integrated rain cover pocket at bottom",
+      "Night safety reflective striping"
+    ],
+    "specs": {
+      "dimensions": "44cm (H) x 29cm (W) x 15cm (D)",
+      "material": "High-density Polyester & Anti-cut Kevlar Mesh",
+      "weight": "890g",
+      "capacity": "22 Liters",
+      "warranty": "1 Year Warranty"
+    },
+    "tags": [
+      "anti-theft",
+      "backpack",
+      "travel",
+      "safety",
+      "waterproof"
+    ]
+  },
+  {
+    "id": "bb-108",
+    "name": "Bella Soft Hobo Shoulder Bag",
+    "category": "Handbags",
+    "subcategory": "Hobo Bags",
+    "brand": "Bright Buy Casual",
+    "price": 8900,
+    "originalPrice": 11900,
+    "discountPercent": 25,
+    "rating": 4.6,
+    "reviewCount": 22,
+    "isNew": false,
+    "isBestSeller": false,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 14,
+    "images": [
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Caramel Suede",
+        "hex": "#c68a4c"
+      },
+      {
+        "name": "Taupe Grey",
+        "hex": "#8b8589"
+      },
+      {
+        "name": "Forest Green",
+        "hex": "#2e473b"
+      }
+    ],
+    "description": "Slouchy, effortless silhouette with comfortable wide shoulder strap. The Bella Hobo adapts effortlessly to your daily lifestyle with roomy interiors and relaxed elegance.",
+    "features": [
+      "Plush textured vegan suede & pebbled leather",
+      "Magnetic closure with decorative side tassels",
+      "Includes matching detachable mini coin purse",
+      "Ultra-lightweight and comfortable on shoulder"
+    ],
+    "specs": {
+      "dimensions": "36cm (L) x 28cm (H) x 13cm (W)",
+      "material": "Pebbled Vegan Leather",
+      "weight": "540g",
+      "warranty": "6 Months Warranty"
+    },
+    "tags": [
+      "hobo",
+      "casual",
+      "slouchy",
+      "comfort"
+    ]
+  },
+  {
+    "id": "bb-109",
+    "name": "Starlight Metallic Evening Clutch",
+    "category": "Wallets & Clutches",
+    "subcategory": "Evening Clutches",
+    "brand": "Bright Buy Glamour",
+    "price": 5400,
+    "originalPrice": 7200,
+    "discountPercent": 25,
+    "rating": 4.9,
+    "reviewCount": 47,
+    "isNew": true,
+    "isBestSeller": true,
+    "isFeatured": true,
+    "inStock": true,
+    "stockCount": 30,
+    "images": [
+      "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Rose Gold",
+        "hex": "#b76e79"
+      },
+      {
+        "name": "Champagne Gold",
+        "hex": "#f7e7ce"
+      },
+      {
+        "name": "Silver Mirror",
+        "hex": "#c0c0c0"
+      }
+    ],
+    "description": "Dazzle at weddings, galas, and dinner dates. The Starlight Clutch features shimmering crystal mesh and comes with an optional drop-in chain to wear on the shoulder.",
+    "features": [
+      "Micro-crystal glitter mesh surface",
+      "Polished metallic clasp with crystal rhinestone",
+      "Removable 120cm silver chain strap",
+      "Satin interior lining with lipstick pouch"
+    ],
+    "specs": {
+      "dimensions": "20cm (L) x 11cm (H) x 5cm (W)",
+      "material": "Alloy frame with crystal mesh exterior",
+      "weight": "310g",
+      "warranty": "6 Months Guarantee"
+    },
+    "tags": [
+      "clutch",
+      "evening",
+      "wedding",
+      "glamour",
+      "gift"
+    ]
+  },
+  {
+    "id": "bb-110",
+    "name": "Heritage Trifold RFID Leather Wallet",
+    "category": "Wallets & Clutches",
+    "subcategory": "Leather Wallets",
+    "brand": "Bright Buy Heritage",
+    "price": 3800,
+    "originalPrice": 4800,
+    "discountPercent": 21,
+    "rating": 4.8,
+    "reviewCount": 73,
+    "isNew": false,
+    "isBestSeller": true,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606503828347-1941fa70b99f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Dark Tan",
+        "hex": "#7b3f00"
+      },
+      {
+        "name": "Classic Black",
+        "hex": "#111111"
+      }
+    ],
+    "description": "Slim, durable, and handcrafted with certified RFID-blocking foil to protect your bank cards from wireless theft. Packed in a luxury gift box.",
+    "features": [
+      "100% Genuine hunter leather with contrast stitching",
+      "8 credit card slots + 2 currency bill dividers",
+      "Clear ID card window with thumb push slot",
+      "Built-in RFID blocking shield",
+      "Gift box ready packaging"
+    ],
+    "specs": {
+      "dimensions": "11.5cm (L) x 9cm (H) x 1.8cm (W)",
+      "material": "Top Grain Waxed Leather",
+      "weight": "110g",
+      "warranty": "1 Year Replacement Warranty"
+    },
+    "tags": [
+      "wallet",
+      "leather",
+      "rfid",
+      "mens",
+      "gift"
+    ]
+  },
+  {
+    "id": "bb-111",
+    "name": "SportActive Dry-Wet Gym Duffle",
+    "category": "Travel Bags",
+    "subcategory": "Gym & Sports",
+    "brand": "Bright Buy Gear",
+    "price": 7900,
+    "originalPrice": 9900,
+    "discountPercent": 20,
+    "rating": 4.7,
+    "reviewCount": 31,
+    "isNew": true,
+    "isBestSeller": false,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 22,
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Coral & Grey",
+        "hex": "#ff7f50"
+      },
+      {
+        "name": "Midnight Black",
+        "hex": "#202020"
+      },
+      {
+        "name": "Teal Blue",
+        "hex": "#008080"
+      }
+    ],
+    "description": "The ultimate workout and weekend active duffle. Features a dedicated waterproof pocket for wet towels/swimwear and an isolated side sneaker tunnel.",
+    "features": [
+      "Separate waterproof PVC wet items pocket",
+      "Breathable shoe compartment with air vent grommets",
+      "External elastic straps for holding yoga mat",
+      "Water-resistant ripstop polyester fabric"
+    ],
+    "specs": {
+      "dimensions": "48cm (L) x 26cm (H) x 24cm (W)",
+      "material": "Ripstop 600D Waterproof Polyester",
+      "weight": "650g",
+      "capacity": "32 Liters",
+      "warranty": "1 Year Warranty"
+    },
+    "tags": [
+      "gym",
+      "sports",
+      "duffle",
+      "waterproof",
+      "fitness"
+    ]
+  },
+  {
+    "id": "bb-112",
+    "name": "Boho Chic Woven Straw Beach Tote",
+    "category": "Tote Bags",
+    "subcategory": "Beach & Summer",
+    "brand": "Bright Buy Island",
+    "price": 6400,
+    "originalPrice": 8500,
+    "discountPercent": 25,
+    "rating": 4.6,
+    "reviewCount": 19,
+    "isNew": true,
+    "isBestSeller": false,
+    "isFeatured": false,
+    "inStock": true,
+    "stockCount": 17,
+    "images": [
+      "https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+    ],
+    "colors": [
+      {
+        "name": "Natural Straw",
+        "hex": "#e4c69b"
+      },
+      {
+        "name": "White Striped",
+        "hex": "#f5f5f5"
+      }
+    ],
+    "description": "Handmade woven rattan straw tote with genuine leather shoulder straps and cotton drawstring lining. Perfect for sunny weekends in Mirissa, Galle Fort, or weekend shopping.",
+    "features": [
+      "Eco-friendly woven corn straw with leather handles",
+      "Drawstring top closure for security and privacy",
+      "Spacious interior for towel, sunglasses, and book",
+      "Handcrafted by skilled artisanal weavers"
+    ],
+    "specs": {
+      "dimensions": "44cm (L) x 32cm (H) x 12cm (W)",
+      "material": "Natural Straw + Vegan Leather",
+      "weight": "490g",
+      "warranty": "6 Months Warranty"
+    },
+    "tags": [
+      "straw",
+      "beach",
+      "summer",
+      "boho",
+      "tote"
+    ]
+  }
+]

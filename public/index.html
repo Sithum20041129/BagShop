@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Buy | Premium Bags & Leather Goods Sri Lanka</title>
+  <meta name="description" content="Discover premium handbags, backpacks, work totes, travel duffles, and wallets at Bright Buy Sri Lanka. Islandwide delivery & cash on delivery available.">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar (Foot Candy Style) -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <div class="announcement-items">
+        <span><i class="fa-solid fa-truck-fast"></i> FREE ISLANDWIDE DELIVERY ON ORDERS OVER RS. 15,000</span>
+        <span class="sep">•</span>
+        <span><i class="fa-solid fa-credit-card"></i> CASH ON DELIVERY / KOKO / MINTPAY AVAILABLE</span>
+        <span class="sep">•</span>
+        <span><i class="fa-solid fa-gift"></i> USE CODE <strong>BRIGHT10</strong> FOR 10% OFF</span>
+      </div>
+      <div class="announcement-links">
+        <a href="#track-order-btn" id="top-track-link"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+        <a href="tel:+94771234567"><i class="fa-solid fa-phone"></i> +94 77 123 4567</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Mobile menu hamburger -->
+      <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        <div class="logo-mark">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">BRIGHT<span class="highlight">BUY</span></span>
+          <span class="logo-tagline">BAGS & LEATHER EDITIONS</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="global-search-input" placeholder="Search luxury handbags, tech backpacks, totes..." autocomplete="off">
+          <button id="clear-search-btn" class="clear-search-btn hidden" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!-- Live Instant Suggestions Dropdown -->
+        <div class="search-dropdown hidden" id="search-dropdown">
+          <div class="search-results-list" id="search-dropdown-results"></div>
+        </div>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Auth Buttons (Login & Sign Up) / User Profile -->
+        <div class="header-auth-container" id="header-auth-container">
+          <div class="guest-auth-btns">
+            <button type="button" class="btn-auth-nav btn-login" id="header-login-btn" data-auth-action="login">
+              <i class="fa-regular fa-user"></i> <span>Login</span>
+            </button>
+            <button type="button" class="btn-auth-nav btn-signup" id="header-signup-btn" data-auth-action="register">
+              <span>Sign Up</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="action-btn" id="open-track-modal-btn" title="Track Your Order" aria-label="Track Your Order">
+          <i class="fa-solid fa-truck-ramp-box"></i>
+        </button>
+        <button class="action-btn" id="open-wishlist-btn" title="View Wishlist" aria-label="View Wishlist">
+          <div class="icon-badge-wrap">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge" id="wishlist-count">0</span>
+          </div>
+        </button>
+        <button class="action-btn cart-btn-action" id="open-cart-btn" title="View Shopping Cart" aria-label="View Shopping Cart">
+          <div class="icon-badge-wrap">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge" id="cart-count">0</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Secondary Category Navigation Bar -->
+    <nav class="nav-bar" id="main-nav">
+      <div class="container nav-container">
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link active" data-category="All">All Bags</a></li>
+          <li><a href="#" class="nav-link" data-category="Handbags">Handbags</a></li>
+          <li><a href="#" class="nav-link" data-category="Backpacks">Backpacks</a></li>
+          <li><a href="#" class="nav-link" data-category="Tote Bags">Tote Bags</a></li>
+          <li><a href="#" class="nav-link" data-category="Travel Bags">Travel & Duffle</a></li>
+          <li><a href="#" class="nav-link" data-category="Wallets & Clutches">Wallets & Clutches</a></li>
+          <li><a href="#" class="nav-link" data-category="Men's Collection">Men's Collection</a></li>
+          <li>
+            <a href="#" class="nav-link special-deal-link" data-filter="sale">
+              <i class="fa-solid fa-fire text-danger"></i> Deals & Offers <span class="hot-pill">HOT</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-nav-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title"><i class="fa-solid fa-bag-shopping"></i> Bright Buy</span>
+      <button class="close-drawer-btn" id="close-mobile-drawer"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-drawer-auth" id="mobile-drawer-auth">
+      <!-- Populated dynamically via JS -->
+    </div>
+    <div class="drawer-body">
+      <ul class="mobile-nav-list" id="mobile-nav-list">
+        <li><a href="#" class="mobile-nav-item active" data-category="All">All Bags</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Handbags">Handbags</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Backpacks">Backpacks</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Tote Bags">Tote Bags</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Travel Bags">Travel & Duffle</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Wallets & Clutches">Wallets & Clutches</a></li>
+        <li><a href="#" class="mobile-nav-item" data-category="Men's Collection">Men's Collection</a></li>
+        <li><a href="#" class="mobile-nav-item special" data-filter="sale">Hot Deals & Sale</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <a href="tel:+94771234567" class="drawer-phone"><i class="fa-solid fa-phone"></i> +94 77 123 4567</a>
+        <p>Colombo • Kandy • Islandwide Delivery</p>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero Slider (dsifootcandy style high impact banners) -->
+    <section class="hero-slider-section">
+      <div class="hero-slider" id="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active" style="background: linear-gradient(90deg, rgba(14,20,27,0.85) 0%, rgba(14,20,27,0.45) 60%, rgba(14,20,27,0.1) 100%), url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-crown"></i> The 2026 Signature Edit</span>
+            <h1 class="hero-title">Handcrafted Luxury,<br>Elegance In Every Stitch</h1>
+            <p class="hero-desc">Explore our top-grain Italian leather handbags, crossbody bags, and evening clutches tailored for the modern trendsetter.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Handbags')">Shop Handbags <i class="fa-solid fa-arrow-right"></i></button>
+              <button class="btn btn-outline-light" onclick="app.filterBySpecial('bestseller')">View Best Sellers</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="hero-slide" style="background: linear-gradient(90deg, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.5) 60%, rgba(15,23,42,0.15) 100%), url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Commute & Adventure</span>
+            <h1 class="hero-title">Urban Tech &<br>Anti-Theft Backpacks</h1>
+            <p class="hero-desc">Waterproof ballistic nylon, dedicated 16" laptop protection, and concealed security pockets built for the island commuter.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Backpacks')">Shop Backpacks <i class="fa-solid fa-arrow-right"></i></button>
+              <button class="btn btn-outline-light" onclick="app.filterByCategory('Travel Bags')">Explore Travel Gear</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="hero-slide" style="background: linear-gradient(90deg, rgba(30,22,18,0.88) 0%, rgba(30,22,18,0.5) 60%, rgba(30,22,18,0.15) 100%), url('https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+          <div class="container hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-plane-departure"></i> Island Escapes</span>
+            <h1 class="hero-title">Full-Grain Leather<br>Weekend Duffle Bags</h1>
+            <p class="hero-desc">Spacious weekender duffles with dedicated shoe tunnels and cabin-compliant luggage ready for your next getaway.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" onclick="app.filterByCategory('Travel Bags')">Shop Travel Duffles <i class="fa-solid fa-arrow-right"></i></button>
+              <button class="btn btn-outline-light" onclick="app.filterBySpecial('sale')">View Flash Deals</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Controls -->
+      <button class="slider-control prev" id="slider-prev" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-control next" id="slider-next" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="slider-dots" id="slider-dots"></div>
+    </section>
+
+    <!-- Trust / Perks Bar (dsifootcandy hallmark) -->
+    <section class="trust-bar-section">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="trust-text">
+              <h4>Islandwide Delivery</h4>
+              <p>Free for orders over Rs. 15,000</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="trust-text">
+              <h4>100% Genuine Quality</h4>
+              <p>Certified materials & workmanship</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <div class="trust-text">
+              <h4>7-Day Easy Exchange</h4>
+              <p>Hassle-free return policy</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="trust-text">
+              <h4>Cash on Delivery</h4>
+              <p>Pay when you inspect at doorstep</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Showcase Quick Grid -->
+    <section class="category-showcase-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-sub">Browse By Style</span>
+            <h2 class="section-title">Shop By Category</h2>
+          </div>
+          <a href="#catalog" class="view-all-link" onclick="app.filterByCategory('All')">View All Bags <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="category-cards-grid" id="category-cards-grid">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Flash Deals Mid Banner with Live Countdown -->
+    <section class="flash-deal-banner">
+      <div class="container flash-deal-container">
+        <div class="flash-deal-content">
+          <div class="deal-tag"><i class="fa-solid fa-bolt"></i> LIMITED TIME OFFER</div>
+          <h2 class="deal-title">Exclusive Weekend Flash Sale</h2>
+          <p class="deal-desc">Enjoy up to 25% off selected genuine leather work totes, laptop backpacks, and evening clutches. Plus apply voucher <strong>BRIGHT10</strong> for additional savings.</p>
+          <div class="countdown-timer">
+            <div class="countdown-unit">
+              <span class="num" id="countdown-hours">14</span>
+              <span class="label">Hours</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="num" id="countdown-minutes">35</span>
+              <span class="label">Mins</span>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit">
+              <span class="num" id="countdown-seconds">42</span>
+              <span class="label">Secs</span>
+            </div>
+          </div>
+          <button class="btn btn-accent btn-lg" onclick="app.filterBySpecial('sale')">
+            <i class="fa-solid fa-tags"></i> Shop All Deals
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Catalog Section -->
+    <section class="catalog-section" id="catalog">
+      <div class="container">
+        <div class="catalog-header-bar">
+          <div class="catalog-title-group">
+            <h2 class="catalog-heading" id="catalog-heading">All Bags</h2>
+            <span class="catalog-count-pill" id="products-count-badge">0 Items</span>
+          </div>
+
+          <!-- Quick Tab Filters -->
+          <div class="quick-tabs">
+            <button class="tab-btn active" data-tab="all">All Bags</button>
+            <button class="tab-btn" data-tab="bestseller"><i class="fa-solid fa-star"></i> Best Sellers</button>
+            <button class="tab-btn" data-tab="new"><i class="fa-solid fa-sparkles"></i> New Arrivals</button>
+            <button class="tab-btn" data-tab="sale"><i class="fa-solid fa-tag"></i> On Sale</button>
+          </div>
+
+          <!-- Controls: Sort & Filter Toggle -->
+          <div class="catalog-controls">
+            <div class="sort-selector-wrap">
+              <label for="sort-select">Sort By:</label>
+              <select id="sort-select" class="sort-select">
+                <option value="featured">Featured / Best Sellers</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Customer Rating</option>
+                <option value="newest">Newest Arrivals</option>
+              </select>
+            </div>
+            <button class="btn btn-outline filter-toggle-btn" id="filter-drawer-btn">
+              <i class="fa-solid fa-filter"></i> Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Applied filters tag pills -->
+        <div class="applied-filter-chips hidden" id="applied-filters-bar">
+          <span class="applied-label">Active Filters:</span>
+          <div class="chip-container" id="chips-container"></div>
+          <button class="clear-all-chips" id="clear-all-filters-btn">Clear All</button>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="products-grid">
+          <!-- Products injected by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state hidden" id="empty-state">
+          <div class="empty-icon"><i class="fa-solid fa-box-open"></i></div>
+          <h3>No matching bags found</h3>
+          <p>Try resetting filters or searching for different keywords.</p>
+          <button class="btn btn-primary" onclick="app.resetAllFilters()">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Bright Buy (Foot Candy Brand Assurance) -->
+    <section class="brand-story-section">
+      <div class="container story-container">
+        <div class="story-image">
+          <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80" alt="Bright Buy Leather Craftsmanship">
+          <div class="story-badge">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <strong>Premium Sri Lankan Store</strong>
+              <span>Curated with Passion</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-content">
+          <span class="section-sub">About Bright Buy</span>
+          <h2 class="section-title">Elevating Island Style Through Timeless Accessories</h2>
+          <p class="story-lead">At Bright Buy, we believe every journey, workday, and celebration deserves a bag that embodies confidence, durability, and contemporary elegance.</p>
+          <p class="story-body">From handcrafted full-grain leather totes and backpacks with shockproof laptop chambers to dazzling evening clutches, every single piece in our collection is rigorously quality-checked before dispatch across Sri Lanka.</p>
+          <div class="story-features">
+            <div class="story-feat-item">
+              <i class="fa-solid fa-gem"></i>
+              <div>
+                <strong>Artisanal Finishes</strong>
+                <p>Reinforced dual-stitching, rustproof brass buckles, and premium zippers.</p>
+              </div>
+            </div>
+            <div class="story-feat-item">
+              <i class="fa-solid fa-shield-heart"></i>
+              <div>
+                <strong>Customer Satisfaction First</strong>
+                <p>Over 12,000+ happy customers served across Colombo, Kandy, Galle, and islandwide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews & Testimonials -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub">Verified Customer Experiences</span>
+          <h2 class="section-title">Loved Across Sri Lanka</h2>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Ordered the Aura Luxe Italian Leather Handbag. Delivered to Kandy in just 2 days! The leather texture and gold hardware look even more breathtaking in person than online. Absolutely in love!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SP</div>
+              <div>
+                <strong>Sachini Perera</strong>
+                <span>Kandy • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"The MetroPro backpack has changed my daily tech commute into Colombo Fort. Plenty of compartments for my 15-inch laptop, charger, water bottle, and the rain resistance kept my laptop bone dry during heavy rains."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">DF</div>
+              <div>
+                <strong>Danushka Fernando</strong>
+                <span>Colombo 03 • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">"Cash on Delivery worked seamlessly. Checked the Voyager Weekender duffle when the courier arrived. The stitching and antique finish are 10/10. Definitely shopping here again!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">MJ</div>
+              <div>
+                <strong>Mahesh Jayawardena</strong>
+                <span>Galle • Verified Buyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter & Voucher Banner -->
+    <section class="newsletter-section">
+      <div class="container newsletter-container">
+        <div class="newsletter-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="newsletter-text">
+          <h2>Get 10% Off Your First Bright Buy Bag</h2>
+          <p>Join our VIP list for exclusive drops, early flash sale access, and member privileges.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-accent">Claim Voucher</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Side Filter Drawer (for mobile / fine-grained filtering) -->
+  <div class="filter-drawer-backdrop" id="filter-backdrop"></div>
+  <aside class="filter-drawer" id="filter-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title"><i class="fa-solid fa-sliders"></i> Filter Catalog</span>
+      <button class="close-drawer-btn" id="close-filter-drawer"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="filter-drawer-body">
+      <!-- Category Filter -->
+      <div class="filter-group">
+        <h4>Category</h4>
+        <div class="filter-options-list" id="filter-categories-list">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Price Range Filter -->
+      <div class="filter-group">
+        <h4>Price Range (Rs.)</h4>
+        <div class="price-slider-wrap">
+          <div class="price-inputs">
+            <span>Min: Rs. <strong id="price-min-val">0</strong></span>
+            <span>Max: Rs. <strong id="price-max-val">30,000</strong></span>
+          </div>
+          <input type="range" id="price-range-slider" min="3000" max="30000" step="500" value="30000">
+        </div>
+      </div>
+
+      <!-- Special Filters -->
+      <div class="filter-group">
+        <h4>Special Tags</h4>
+        <label class="filter-check-item">
+          <input type="checkbox" id="filter-check-sale">
+          <span>On Sale / Discounted</span>
+        </label>
+        <label class="filter-check-item">
+          <input type="checkbox" id="filter-check-new">
+          <span>New Arrivals</span>
+        </label>
+        <label class="filter-check-item">
+          <input type="checkbox" id="filter-check-bestseller">
+          <span>Best Sellers</span>
+        </label>
+      </div>
+
+      <div class="filter-drawer-footer">
+        <button class="btn btn-outline" id="reset-filters-btn">Reset All</button>
+        <button class="btn btn-primary" id="apply-filters-btn">Apply Filters</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sliding Cart Drawer (Foot Candy Style) -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Shopping Cart (<span id="cart-items-count">0</span>)</span>
+      </div>
+      <button class="close-drawer-btn" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="free-shipping-bar-wrap">
+      <div class="free-shipping-text" id="free-shipping-notice">
+        Add <strong>Rs. 15,000</strong> more for <strong>FREE ISLANDWIDE DELIVERY!</strong>
+      </div>
+      <div class="shipping-progress-bg">
+        <div class="shipping-progress-fill" id="shipping-progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Cart Drawer Footer -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <!-- Coupon input inside cart -->
+      <div class="cart-coupon-wrap">
+        <input type="text" id="cart-coupon-input" placeholder="Coupon Code (e.g. BRIGHT10)" uppercase>
+        <button class="btn btn-secondary btn-sm" id="apply-coupon-btn">Apply</button>
+      </div>
+      <div class="coupon-feedback hidden" id="coupon-feedback"></div>
+
+      <!-- Pricing Summary Breakdown -->
+      <div class="cart-summary-breakdown">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">Rs. 0</span>
+        </div>
+        <div class="summary-line discount-line hidden" id="cart-discount-row">
+          <span>Discount (<span id="applied-discount-label">0%</span>)</span>
+          <span class="text-success" id="cart-discount-amt">- Rs. 0</span>
+        </div>
+        <div class="summary-line">
+          <span>Islandwide Delivery</span>
+          <span id="cart-shipping-fee">Rs. 650</span>
+        </div>
+        <div class="summary-line total-line">
+          <span>Total Amount</span>
+          <span class="total-price" id="cart-total-amt">Rs. 0</span>
+        </div>
+      </div>
+
+      <!-- Checkout Action Button -->
+      <button class="btn btn-primary btn-block btn-lg" id="proceed-to-checkout-btn">
+        <i class="fa-solid fa-lock"></i> Proceed to Secure Checkout
+      </button>
+      <div class="cart-trust-icons">
+        <span><i class="fa-solid fa-shield-check"></i> Bank Level 256-Bit SSL Encryption</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Full Checkout Modal -->
+  <div class="modal-backdrop hidden" id="checkout-modal-backdrop">
+    <div class="checkout-modal" id="checkout-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <h3>Bright Buy Checkout</h3>
+            <span class="subtext">Secure Order Placement • Islandwide Sri Lanka</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="close-checkout-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="checkout-modal-body">
+        <form id="checkout-form" class="checkout-form">
+          <div class="checkout-layout-grid">
+            <!-- Left Form Fields -->
+            <div class="checkout-fields">
+              <h4 class="form-section-title"><i class="fa-solid fa-user"></i> 1. Contact & Customer Details</h4>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cust-name">Full Name *</label>
+                  <input type="text" id="cust-name" required placeholder="e.g. Kasun Fernando">
+                </div>
+                <div class="form-group">
+                  <label for="cust-phone">Mobile Phone (for Courier SMS/Call) *</label>
+                  <input type="tel" id="cust-phone" required placeholder="077 123 4567">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cust-email">Email Address (for Receipt & Tracking)</label>
+                <input type="email" id="cust-email" placeholder="name@example.lk">
+              </div>
+
+              <h4 class="form-section-title mt-4"><i class="fa-solid fa-location-dot"></i> 2. Delivery Address</h4>
+              <div class="form-group">
+                <label for="cust-address">Street Address / House No. *</label>
+                <input type="text" id="cust-address" required placeholder="No. 12/A, Temple Road">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cust-city">City / Town *</label>
+                  <input type="text" id="cust-city" required placeholder="e.g. Nugegoda">
+                </div>
+                <div class="form-group">
+                  <label for="cust-district">District *</label>
+                  <select id="cust-district" required>
+                    <option value="Colombo" selected>Colombo</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Kalutara">Kalutara</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Hambantota">Hambantota</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Kilinochchi">Kilinochchi</option>
+                    <option value="Mannar">Mannar</option>
+                    <option value="Vavuniya">Vavuniya</option>
+                    <option value="Mullaitivu">Mullaitivu</option>
+                    <option value="Batticaloa">Batticaloa</option>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                    <option value="Kurunegala">Kurunegala</option>
+                    <option value="Puttalam">Puttalam</option>
+                    <option value="Anuradhapura">Anuradhapura</option>
+                    <option value="Polonnaruwa">Polonnaruwa</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Monaragala">Monaragala</option>
+                    <option value="Ratnapura">Ratnapura</option>
+                    <option value="Kegalle">Kegalle</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cust-notes">Delivery Instructions / Landmark (Optional)</label>
+                <input type="text" id="cust-notes" placeholder="e.g. Near supermarket, deliver after 2 PM">
+              </div>
+
+              <h4 class="form-section-title mt-4"><i class="fa-solid fa-credit-card"></i> 3. Payment Method</h4>
+              <div class="payment-methods-list">
+                <label class="payment-method-card active">
+                  <input type="radio" name="paymentMethod" value="Cash on Delivery (COD)" checked>
+                  <div class="pay-details">
+                    <span class="pay-title"><i class="fa-solid fa-hand-holding-dollar"></i> Cash on Delivery (COD)</span>
+                    <span class="pay-sub">Pay cash directly to the courier agent upon doorstep package inspection.</span>
+                  </div>
+                </label>
+
+                <label class="payment-method-card">
+                  <input type="radio" name="paymentMethod" value="Card Payment">
+                  <div class="pay-details">
+                    <span class="pay-title"><i class="fa-solid fa-credit-card"></i> Visa / Mastercard / AMEX</span>
+                    <span class="pay-sub">Pay instantly via secure bank payment gateway simulation.</span>
+                  </div>
+                </label>
+
+                <label class="payment-method-card">
+                  <input type="radio" name="paymentMethod" value="Bank Transfer">
+                  <div class="pay-details">
+                    <span class="pay-title"><i class="fa-solid fa-building-columns"></i> Bank Deposit / Online Transfer</span>
+                    <span class="pay-sub">Transfer to Commercial Bank / Sampath Bank account & upload slip.</span>
+                  </div>
+                </label>
+
+                <label class="payment-method-card">
+                  <input type="radio" name="paymentMethod" value="Koko / Mintpay">
+                  <div class="pay-details">
+                    <span class="pay-title"><i class="fa-solid fa-layer-group"></i> 3 Interest-Free Installments (Koko / Mintpay)</span>
+                    <span class="pay-sub">Split total into 3 easy monthly debit payments.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Right Summary Sticky Column -->
+            <div class="checkout-summary-column">
+              <div class="order-summary-box">
+                <h4>Order Summary</h4>
+                <div class="checkout-items-preview" id="checkout-items-preview">
+                  <!-- items preview injected -->
+                </div>
+                <div class="summary-line">
+                  <span>Items Subtotal</span>
+                  <span id="checkout-subtotal">Rs. 0</span>
+                </div>
+                <div class="summary-line discount-line hidden" id="checkout-discount-row">
+                  <span>Coupon Discount</span>
+                  <span class="text-success" id="checkout-discount-val">- Rs. 0</span>
+                </div>
+                <div class="summary-line">
+                  <span>Islandwide Delivery</span>
+                  <span id="checkout-delivery-fee">Rs. 650</span>
+                </div>
+                <div class="summary-line grand-total-line">
+                  <span>Grand Total</span>
+                  <span class="grand-total-val" id="checkout-grand-total">Rs. 0</span>
+                </div>
+                <div class="delivery-pledge">
+                  <i class="fa-solid fa-truck-ramp-box"></i>
+                  <span>Estimated Delivery: <strong>2 - 3 Business Days</strong></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg mt-3" id="submit-order-btn">
+                  <i class="fa-solid fa-check-circle"></i> Place Order Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Order Success View (shown after order submission) -->
+        <div class="order-success-view hidden" id="order-success-view">
+          <div class="success-icon-wrap">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2>Thank You For Your Order!</h2>
+          <p class="success-lead">Your order has been placed and received by our central fulfillment hub.</p>
+          <div class="order-ref-card">
+            <span>Your Order Reference ID:</span>
+            <strong class="order-id-display" id="success-order-id">BB-2026-0000</strong>
+            <p>Save this reference ID to track live delivery dispatch status.</p>
+          </div>
+          <div class="success-details-card" id="success-order-summary-content"></div>
+          <div class="success-actions">
+            <button class="btn btn-primary" id="track-this-order-btn"><i class="fa-solid fa-location-dot"></i> Track This Order Now</button>
+            <button class="btn btn-outline" id="continue-shopping-btn">Continue Shopping</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Tracking Modal -->
+  <div class="modal-backdrop hidden" id="tracking-modal-backdrop">
+    <div class="tracking-modal" id="tracking-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Track Your Bright Buy Order</h3>
+        </div>
+        <button class="modal-close-btn" id="close-tracking-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="tracking-search-bar">
+          <input type="text" id="track-input" placeholder="Enter Order ID (e.g. BB-2026-7842)">
+          <button class="btn btn-primary" id="search-track-btn"><i class="fa-solid fa-magnifying-glass"></i> Track</button>
+        </div>
+        <div class="quick-try-hint">
+          Sample order for demonstration: <a href="#" id="demo-track-link">BB-2026-7842</a>
+        </div>
+
+        <div class="tracking-status-display hidden" id="tracking-status-display">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-backdrop hidden" id="quickview-modal-backdrop">
+    <div class="quickview-modal" id="quickview-modal">
+      <button class="modal-close-btn quickview-close" id="close-quickview-modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-body" id="quickview-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="modal-backdrop hidden" id="wishlist-modal-backdrop">
+    <div class="wishlist-modal" id="wishlist-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-heart text-danger"></i>
+          <h3>My Saved Wishlist (<span id="wishlist-modal-count">0</span>)</h3>
+        </div>
+        <button class="modal-close-btn" id="close-wishlist-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="wishlist-items-grid" id="wishlist-items-grid">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Modal (Login & Sign Up with Clerk Integration) -->
+  <div class="modal-backdrop hidden" id="auth-modal-backdrop">
+    <div class="auth-modal" id="auth-modal">
+      <button class="modal-close-btn auth-close-btn" id="close-auth-modal"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="auth-modal-header">
+        <div class="auth-logo">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <h3 id="auth-modal-title">Welcome to Bright Buy</h3>
+        <p class="auth-modal-subtitle" id="auth-modal-subtitle">Access your orders, saved bags, and member discounts</p>
+      </div>
+
+      <!-- Auth Tab Switcher -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn" onclick="app.switchAuthTab('login')">Sign In</button>
+        <button class="auth-tab-btn" id="tab-register-btn" onclick="app.switchAuthTab('register')">Create Account</button>
+      </div>
+
+      <div class="auth-modal-body">
+        <!-- Third-Party Auth (Clerk / Social Providers) -->
+        <div class="third-party-auth-section">
+          <button type="button" class="btn btn-clerk-social" id="clerk-sso-btn" onclick="app.handleThirdPartyAuth('clerk')">
+            <svg class="clerk-icon" viewBox="0 0 24 24" width="20" height="20" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2zm6 8h-2v-4h2v4zm0-6h-2V7h2v4z" fill="#6C47FF"/>
+            </svg>
+            <span>Continue with <strong>Clerk SSO</strong></span>
+            <span class="clerk-badge">Clerk Auth</span>
+          </button>
+          <div class="auth-divider">
+            <span>or continue with email</span>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <form class="auth-form" id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="login-email" required placeholder="name@example.lk" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="label-with-link">
+              <label for="login-password">Password</label>
+              <a href="#" class="forgot-link" onclick="app.showToast('Demo mode: Use password Password123! or fill demo below', 'default'); return false;">Forgot?</a>
+            </div>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="login-password" required placeholder="••••••••" autocomplete="current-password">
+              <button type="button" class="pwd-toggle" onclick="app.togglePasswordVisibility('login-password')"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+
+          <div class="demo-account-hint">
+            <span>Quick Demo:</span>
+            <div style="display:flex; gap:0.4rem;">
+              <button type="button" class="btn-demo-fill" onclick="app.fillDemoAccount('customer')">Customer Demo</button>
+              <button type="button" class="btn-demo-fill btn-demo-admin" onclick="app.fillDemoAccount('admin')"><i class="fa-solid fa-shield-halved"></i> Admin Demo</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="login-submit-btn">
+            Sign In <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form class="auth-form hidden" id="register-form">
+          <div class="form-group">
+            <label for="reg-name">Full Name</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" id="reg-name" required placeholder="e.g. Kasun Perera" autocomplete="name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Email Address</label>
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="reg-email" required placeholder="name@example.lk" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-phone">Phone Number (Optional)</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="reg-phone" placeholder="077 123 4567" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Create Password (min 6 characters)</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="reg-password" required minlength="6" placeholder="••••••••" autocomplete="new-password">
+              <button type="button" class="pwd-toggle" onclick="app.togglePasswordVisibility('reg-password')"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-accent btn-block btn-lg" id="register-submit-btn">
+            Create Account & Get 10% Off
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Orders Modal -->
+  <div class="modal-backdrop hidden" id="my-orders-modal-backdrop">
+    <div class="my-orders-modal" id="my-orders-modal">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-box-archive"></i>
+          <h3>My Orders History</h3>
+        </div>
+        <button class="modal-close-btn" id="close-my-orders-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" id="my-orders-list">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Modal (Confirm/Discard Orders, Add Bags) -->
+  <div class="modal-backdrop hidden" id="admin-dashboard-modal-backdrop">
+    <div class="admin-dashboard-modal" id="admin-dashboard-modal">
+      <div class="modal-header admin-modal-header">
+        <div class="modal-title-wrap">
+          <span class="admin-badge-icon"><i class="fa-solid fa-shield-halved"></i></span>
+          <div>
+            <h3>Bright Buy Admin Control Portal</h3>
+            <span class="subtext">Manage Orders, Confirm / Discard Deliveries & Add Bag Products</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" id="close-admin-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Quick Metrics Cards -->
+      <div class="admin-metrics-row" id="admin-metrics-row">
+        <div class="metric-card">
+          <span class="metric-label">Total Store Revenue</span>
+          <strong class="metric-value text-success" id="admin-stat-revenue">Rs. 0</strong>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Total Orders</span>
+          <strong class="metric-value" id="admin-stat-orders">0</strong>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Pending Review</span>
+          <strong class="metric-value text-danger" id="admin-stat-pending">0</strong>
+        </div>
+        <div class="metric-card">
+          <span class="metric-label">Bags in Store</span>
+          <strong class="metric-value text-accent" id="admin-stat-products">0</strong>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="admin-tabs-nav">
+        <button class="admin-tab-btn active" id="tab-admin-orders-btn" onclick="app.switchAdminTab('orders')">
+          <i class="fa-solid fa-list-check"></i> Orders Management (<span id="admin-orders-badge-count">0</span>)
+        </button>
+        <button class="admin-tab-btn" id="tab-admin-add-prod-btn" onclick="app.switchAdminTab('add-product')">
+          <i class="fa-solid fa-plus-circle"></i> Add New Product
+        </button>
+        <button class="admin-tab-btn" id="tab-admin-prods-btn" onclick="app.switchAdminTab('inventory')">
+          <i class="fa-solid fa-boxes-stacked"></i> Products Inventory
+        </button>
+      </div>
+
+      <div class="modal-body admin-modal-body">
+        <!-- 1. Orders Management Tab -->
+        <div class="admin-tab-pane" id="admin-tab-orders">
+          <div class="admin-filter-bar">
+            <div class="search-box admin-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="admin-order-search-input" placeholder="Search by Order ID, Customer Name, or Phone..." oninput="app.filterAdminOrders()">
+            </div>
+            <div class="admin-status-filters">
+              <button class="status-chip active" data-status="all" onclick="app.filterAdminOrdersStatus('all')">All</button>
+              <button class="status-chip" data-status="Order Placed" onclick="app.filterAdminOrdersStatus('Order Placed')">Pending</button>
+              <button class="status-chip" data-status="Confirmed" onclick="app.filterAdminOrdersStatus('Confirmed')">Confirmed</button>
+              <button class="status-chip" data-status="Dispatched with Courier" onclick="app.filterAdminOrdersStatus('Dispatched with Courier')">Dispatched</button>
+              <button class="status-chip" data-status="Delivered" onclick="app.filterAdminOrdersStatus('Delivered')">Delivered</button>
+              <button class="status-chip" data-status="Discarded" onclick="app.filterAdminOrdersStatus('Discarded')">Discarded</button>
+            </div>
+          </div>
+          <div class="admin-orders-table-wrap" id="admin-orders-table-wrap">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- 2. Add Product Tab -->
+        <div class="admin-tab-pane hidden" id="admin-tab-add-product">
+          <form id="admin-add-product-form" class="admin-form-grid" onsubmit="app.handleAdminAddProduct(event)">
+            <div class="form-section-full">
+              <h4 class="form-section-title"><i class="fa-solid fa-bag-shopping"></i> Product Details</h4>
+            </div>
+            
+            <div class="form-group">
+              <label for="new-prod-name">Bag Name *</label>
+              <input type="text" id="new-prod-name" required placeholder="e.g. Royal Oxford Leather Briefcase">
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-category">Category *</label>
+              <select id="new-prod-category" required>
+                <option value="Handbags">Handbags</option>
+                <option value="Backpacks">Backpacks</option>
+                <option value="Tote Bags">Tote Bags</option>
+                <option value="Travel Bags">Travel Bags</option>
+                <option value="Wallets & Clutches">Wallets & Clutches</option>
+                <option value="Men's Collection">Men's Collection</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-price">Selling Price (Rs.) *</label>
+              <input type="number" id="new-prod-price" required min="100" placeholder="14500">
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-orig-price">Original Price (Rs.)</label>
+              <input type="number" id="new-prod-orig-price" placeholder="18500 (Strike-through)">
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-stock">Available Stock Units</label>
+              <input type="number" id="new-prod-stock" value="15" min="1">
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-brand">Brand / Edition</label>
+              <input type="text" id="new-prod-brand" placeholder="Bright Buy Signature">
+            </div>
+
+            <div class="form-group form-col-2">
+              <label for="new-prod-image">Image URL *</label>
+              <input type="url" id="new-prod-image" required placeholder="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80">
+              <small class="form-hint" style="color:var(--text-muted); font-size:0.75rem;">Tip: You can paste any image link from Unsplash, Cloudinary, etc.</small>
+            </div>
+
+            <div class="form-group form-col-2">
+              <label for="new-prod-desc">Product Description</label>
+              <textarea id="new-prod-desc" rows="3" placeholder="Describe the materials, compartments, styling, and versatility of this bag..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-material">Material</label>
+              <input type="text" id="new-prod-material" placeholder="e.g. Top-grain Cowhide Leather">
+            </div>
+
+            <div class="form-group">
+              <label for="new-prod-dims">Dimensions</label>
+              <input type="text" id="new-prod-dims" placeholder="e.g. 40cm (L) x 30cm (H) x 12cm (W)">
+            </div>
+
+            <div class="form-group form-col-2" style="display:flex; gap:1.5rem; margin-top:0.5rem;">
+              <label class="filter-check-item">
+                <input type="checkbox" id="new-prod-bestseller">
+                <span>Mark as <strong>Best Seller</strong></span>
+              </label>
+              <label class="filter-check-item">
+                <input type="checkbox" id="new-prod-featured" checked>
+                <span>Mark as <strong>Featured in Showcase</strong></span>
+              </label>
+            </div>
+
+            <div class="form-col-2 mt-3" style="grid-column: 1 / -1;">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="admin-submit-prod-btn">
+                <i class="fa-solid fa-plus-circle"></i> Add Bag To Storefront Catalog
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- 3. Inventory Tab -->
+        <div class="admin-tab-pane hidden" id="admin-tab-inventory">
+          <div class="admin-inventory-list" id="admin-inventory-list">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer (Foot Candy Style) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="#" class="brand-logo footer-logo">
+          <div class="logo-mark"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div class="logo-text">
+            <span class="logo-name">BRIGHT<span class="highlight">BUY</span></span>
+            <span class="logo-tagline">BAGS & LEATHER EDITIONS</span>
+          </div>
+        </a>
+        <p class="footer-about">Bright Buy is Sri Lanka's destination for hand-curated leather handbags, backpacks, travel duffles, and everyday carry accessories designed with elegance, durability, and practical innovation.</p>
+        <div class="footer-contacts">
+          <p><i class="fa-solid fa-location-dot"></i> Flagship Store: 245 Galle Road, Colombo 03</p>
+          <p><i class="fa-solid fa-phone"></i> Hotline: +94 77 123 4567 / +94 11 234 5678</p>
+          <p><i class="fa-solid fa-envelope"></i> Email: support@brightbuy.lk</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Product Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="app.filterByCategory('Handbags'); return false;">Luxury Handbags</a></li>
+          <li><a href="#" onclick="app.filterByCategory('Backpacks'); return false;">Laptop & Tech Backpacks</a></li>
+          <li><a href="#" onclick="app.filterByCategory('Tote Bags'); return false;">Canvas & Leather Totes</a></li>
+          <li><a href="#" onclick="app.filterByCategory('Travel Bags'); return false;">Travel Duffles & Luggage</a></li>
+          <li><a href="#" onclick="app.filterByCategory('Wallets & Clutches'); return false;">Wallets & Clutches</a></li>
+          <li><a href="#" onclick="app.filterByCategory('Men\'s Collection'); return false;">Executive Men's Collection</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="app.openTrackingModal(); return false;">Track Your Order</a></li>
+          <li><a href="#catalog" onclick="app.filterBySpecial('sale'); return false;">Special Offers & Discounts</a></li>
+          <li><a href="#">Shipping & Delivery Policy</a></li>
+          <li><a href="#">7-Day Return & Exchange</a></li>
+          <li><a href="#">Warranty & Leather Care Guide</a></li>
+          <li><a href="#">Privacy & Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Payment & Guarantee</h4>
+        <p class="footer-sub">We accept all major payment methods across Sri Lanka:</p>
+        <div class="payment-badges-grid">
+          <span class="pay-badge"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          <span class="pay-badge"><i class="fa-brands fa-cc-visa"></i> Visa</span>
+          <span class="pay-badge"><i class="fa-brands fa-cc-mastercard"></i> Mastercard</span>
+          <span class="pay-badge"><i class="fa-solid fa-building-columns"></i> Bank Transfer</span>
+          <span class="pay-badge"><i class="fa-solid fa-wallet"></i> Koko / Mintpay</span>
+        </div>
+        <div class="security-guarantee">
+          <i class="fa-solid fa-lock"></i> 100% Secure Checkout Guaranteed
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>© 2026 Bright Buy Bags (Pvt) Ltd. All Rights Reserved. Crafted with care in Sri Lanka.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

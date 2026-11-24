@@ -1,0 +1,45 @@
+[
+  {
+    "id": "usr_admin_001",
+    "name": "Admin Manager",
+    "email": "admin@brightbuy.lk",
+    "passwordHash": "$2b$10$C11GzPyvr9l7Yf7KfUObTefPG9EzZ6ZuqZEs/dC9IFLbCBZWdKME6",
+    "role": "admin",
+    "phone": "+94 77 999 8888",
+    "avatar": "https://ui-avatars.com/api/?name=Admin+Manager&background=D4AF37&color=0F172A",
+    "provider": "local",
+    "createdAt": "2026-11-20T08:00:00.000Z"
+  },
+  {
+    "id": "usr_demo_101",
+    "name": "Kavinda Perera",
+    "email": "customer@brightbuy.lk",
+    "passwordHash": "$2b$10$BCJk82kc9wnKcGob73ow5OO/xnEzmKikJcAXX6eBXG4IBlioBGMTu",
+    "role": "customer",
+    "phone": "+94 77 123 4567",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    "provider": "local",
+    "createdAt": "2026-11-20T10:00:00.000Z"
+  },
+  {
+    "id": "usr_clerk_1795434316504",
+    "clerkId": "user_clerk_123",
+    "email": "clerkuser@example.lk",
+    "name": "Clerk Customer",
+    "avatar": "https://ui-avatars.com/api/?name=Clerk%20Customer&background=0F172A&color=D4AF37",
+    "role": "customer",
+    "provider": "clerk",
+    "createdAt": "2026-11-23T11:45:16.504Z"
+  },
+  {
+    "id": "usr_clerk_1795456865453",
+    "clerkId": "user_clerk_demo_3137",
+    "email": "member@clerk.brightbuy.lk",
+    "name": "Clerk Verified Member",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+    "role": "customer",
+    "provider": "clerk",
+    "createdAt": "2026-11-23T18:01:05.453Z",
+    "updatedAt": "2026-11-23T18:01:05.763Z"
+  }
+]
