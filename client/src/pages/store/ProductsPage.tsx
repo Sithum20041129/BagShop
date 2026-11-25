@@ -22,15 +22,16 @@ const CATEGORIES = [
 export function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCat = searchParams.get('category') || 'All';
+  const initialSearch = searchParams.get('search') || '';
 
   const [category, setCategory] = useState(initialCat);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(initialSearch);
   const [sort, setSort] = useState('newest');
   const [inStockOnly, setInStockOnly] = useState(false);
 
   useEffect(() => {
-    const paramCat = searchParams.get('category') || 'All';
-    setCategory(paramCat);
+    setCategory(searchParams.get('category') || 'All');
+    setSearch(searchParams.get('search') || '');
   }, [searchParams]);
 
   const { data, isLoading } = useQuery({

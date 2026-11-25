@@ -115,7 +115,7 @@ export function HomePage() {
       </section>
 
       {/* Categories Editorial Strip */}
-      <section className="border-t border-[#E7E5E4] bg-white">
+      <section id="categories" className="border-t border-[#E7E5E4] bg-white">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <p className="text-[11px] uppercase tracking-[0.2em] text-[#78716C]">Silhouettes</p>
