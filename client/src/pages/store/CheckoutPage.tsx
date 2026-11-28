@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { useUser } from '@clerk/react';
 import { Clock, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { CreateOrderSchema, type OrderDTO } from '@shared/schemas/order.schema';
@@ -16,6 +17,7 @@ import { Separator } from '@/components/ui/separator';
 
 export function CheckoutPage() {
   const { items, clearCart } = useCartStore();
+  const { user } = useUser();
   const { data: storeData } = useQuery({
     queryKey: ['store-status'],
     queryFn: api.getStoreStatus,
@@ -40,6 +42,15 @@ export function CheckoutPage() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [completedOrder, setCompletedOrder] = useState<OrderDTO | null>(null);
+
+  useEffect(() => {
+    if (!user) return;
+    setForm((prev) => ({
+      ...prev,
+      customerName: prev.customerName || user.fullName || '',
+      customerEmail: prev.customerEmail || user.primaryEmailAddress?.emailAddress || '',
+    }));
+  }, [user]);
 
   if (completedOrder) {
     return (

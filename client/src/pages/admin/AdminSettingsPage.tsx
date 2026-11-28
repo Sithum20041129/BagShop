@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
 import { api } from '@/lib/api';
 import { AdminShell } from '@/components/admin/AdminShell';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
@@ -17,11 +19,33 @@ export function AdminSettingsPage() {
     queryFn: api.getStoreStatus,
   });
 
+  const { data: waData } = useQuery({
+    queryKey: ['admin-whatsapp-status'],
+    queryFn: api.adminGetWhatsAppStatus,
+  });
+
   const [isOpen, setIsOpen] = useState(true);
   const [closedMessage, setClosedMessage] = useState('');
   const [businessHours, setBusinessHours] = useState('');
   const [shippingFeeLkr, setShippingFeeLkr] = useState('650');
   const [saving, setSaving] = useState(false);
+  const [testingWa, setTestingWa] = useState(false);
+
+  const handleTestWhatsApp = async () => {
+    setTestingWa(true);
+    try {
+      const res = await api.adminTestWhatsApp();
+      if (res.sent) {
+        toast.success('Test WhatsApp message sent to Admin phone!');
+      } else {
+        toast.info(res.detail || 'WhatsApp preview logged to server console.');
+      }
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'WhatsApp test failed');
+    } finally {
+      setTestingWa(false);
+    }
+  };
 
   useEffect(() => {
     if (data?.settings) {
@@ -116,6 +140,37 @@ export function AdminSettingsPage() {
                 {saving ? 'Saving Settings...' : 'Save Store Settings'}
               </Button>
             </form>
+          </CardContent>
+        </Card>
+
+        <Card className="mt-6">
+          <CardHeader>
+            <div className="flex items-center justify-between">
+              <CardTitle className="flex items-center gap-2">
+                <MessageSquare className="h-4 w-4 text-[#92400E]" />
+                WhatsApp Order Alerts
+              </CardTitle>
+              {waData?.configured ? (
+                <Badge variant="success">Live Connected</Badge>
+              ) : (
+                <Badge variant="preorder">Preview Mode</Badge>
+              )}
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-xs leading-relaxed text-[#78716C]">
+              {waData?.configured
+                ? 'Every new order and pre-order automatically sends a formatted WhatsApp message with customer details and ordered items to the configured Admin WhatsApp number.'
+                : 'Add WHATSAPP_PHONE_NUMBER_ID, WHATSAPP_ACCESS_TOKEN, and ADMIN_WHATSAPP_NUMBER to .dev.vars (or Wrangler secrets) to deliver live WhatsApp alerts.'}
+            </p>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => void handleTestWhatsApp()}
+              disabled={testingWa}
+            >
+              {testingWa ? 'Sending Test...' : 'Send Test WhatsApp Alert'}
+            </Button>
           </CardContent>
         </Card>
       </div>

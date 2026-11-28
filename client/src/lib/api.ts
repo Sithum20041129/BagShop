@@ -13,11 +13,29 @@ import type {
   UpdateStoreSettingsInput,
 } from '@shared/schemas/store.schema';
 
+export interface AuthUserDTO {
+  id: number;
+  clerkId: string | null;
+  email: string;
+  name: string;
+  role: 'CUSTOMER' | 'ADMIN';
+  createdAt: string;
+}
+
+let authTokenGetter: (() => Promise<string | null>) | null = null;
+
+export function setAuthTokenGetter(getter: () => Promise<string | null>) {
+  authTokenGetter = getter;
+}
+
 async function request<T>(url: string, options?: RequestInit): Promise<T> {
+  const token = authTokenGetter ? await authTokenGetter() : null;
+
   const res = await fetch(url, {
     credentials: 'include',
     headers: {
       ...(options?.body instanceof FormData ? {} : { 'Content-Type': 'application/json' }),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
       ...(options?.headers || {}),
     },
     ...options,
@@ -36,6 +54,9 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
 }
 
 export const api = {
+  // Auth
+  getAuthMe: () => request<{ user: AuthUserDTO }>('/api/auth/me'),
+
   // Storefront
   getStoreStatus: () => request<{ settings: StoreSettingsDTO }>('/api/store/status'),
 
@@ -74,19 +95,7 @@ export const api = {
       `/api/orders/track/${encodeURIComponent(orderNumber)}?phone=${encodeURIComponent(phone)}`
     ),
 
-  // Admin Auth
-  adminLogin: (passcode: string) =>
-    request<{ message: string }>('/api/admin/login', {
-      method: 'POST',
-      body: JSON.stringify({ passcode }),
-    }),
-
-  adminLogout: () =>
-    request<{ message: string }>('/api/admin/logout', { method: 'POST' }),
-
-  adminMe: () => request<{ authenticated: boolean }>('/api/admin/me'),
-
-  // Admin Products
+  // Admin Products (Clerk ADMIN role protected)
   adminGetProducts: () => request<{ products: ProductDTO[] }>('/api/admin/products'),
 
   adminCreateProduct: (input: CreateProductInput) =>
@@ -131,10 +140,20 @@ export const api = {
       body: JSON.stringify({ status, trackingCode }),
     }),
 
-  // Admin Store Settings
+  // Admin Store Settings (Open / Closed Pre-Order Toggle)
   adminUpdateStoreStatus: (input: UpdateStoreSettingsInput) =>
     request<{ settings: StoreSettingsDTO }>('/api/admin/store-status', {
       method: 'PATCH',
       body: JSON.stringify(input),
     }),
+
+  // Admin WhatsApp Cloud API Status & Test
+  adminGetWhatsAppStatus: () =>
+    request<{ configured: boolean }>('/api/admin/whatsapp-status'),
+
+  adminTestWhatsApp: () =>
+    request<{ sent: boolean; mode: 'live' | 'preview'; detail?: string }>(
+      '/api/admin/whatsapp-test',
+      { method: 'POST' }
+    ),
 };

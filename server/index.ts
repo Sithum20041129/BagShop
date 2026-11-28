@@ -5,6 +5,7 @@ import storeRoutes from './routes/store.routes';
 import productsRoutes from './routes/products.routes';
 import ordersRoutes from './routes/orders.routes';
 import adminRoutes from './routes/admin.routes';
+import authRoutes from './routes/auth.routes';
 import { MediaService } from './services/media.service';
 
 const app = new Hono<{ Bindings: Env }>();
@@ -33,6 +34,7 @@ app.get('/api/media/*', async (c) => {
 });
 
 app.route('/api', storeRoutes);
+app.route('/api/auth', authRoutes);
 app.route('/api/products', productsRoutes);
 app.route('/api/orders', ordersRoutes);
 app.route('/api/admin', adminRoutes);

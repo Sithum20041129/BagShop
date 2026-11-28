@@ -13,11 +13,12 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate:local": "wrangler d1 migrations apply bagshop-db --local",
     "db:migrate:remote": "wrangler d1 migrations apply bagshop-db --remote",
-    "db:seed:gen": "tsx scripts/generate-seed.ts",
-    "db:seed:local": "npm run db:seed:gen && wrangler d1 execute bagshop-db --local --file=scripts/seed.sql",
-    "db:seed:remote": "npm run db:seed:gen && wrangler d1 execute bagshop-db --remote --file=scripts/seed.sql"
+    "db:seed:local": "wrangler d1 execute bagshop-db --local --file=scripts/seed.sql",
+    "db:seed:remote": "wrangler d1 execute bagshop-db --remote --file=scripts/seed.sql"
   },
   "dependencies": {
+    "@clerk/backend": "^3.33.1",
+    "@clerk/react": "^6.19.7",
     "@tanstack/react-query": "^5.71.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

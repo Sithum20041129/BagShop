@@ -5,45 +5,17 @@ import { ProductService } from '../services/product.service';
 import { OrderService } from '../services/order.service';
 import { StoreService } from '../services/store.service';
 import { MediaService } from '../services/media.service';
-import {
-  adminAuthMiddleware,
-  clearAdminSessionCookie,
-  createAdminSessionCookie,
-  isValidAdminSession,
-  verifyPasscodeConstantTime,
-} from '../middlewares/admin-auth';
+import { WhatsAppService } from '../services/whatsapp.service';
+import { adminAuthMiddleware } from '../middlewares/admin-auth';
 import { parseJsonBody } from '../middlewares/validate';
 import { AppError } from '../middlewares/error';
-import { AdminLoginSchema, UpdateStoreSettingsSchema } from '@shared/schemas/store.schema';
+import { UpdateStoreSettingsSchema } from '@shared/schemas/store.schema';
 import { CreateProductSchema, UpdateProductSchema } from '@shared/schemas/product.schema';
 import { UpdateOrderStatusSchema } from '@shared/schemas/order.schema';
 
 const adminRoutes = new Hono<{ Bindings: Env }>();
 
-// Public Admin Auth Endpoints
-adminRoutes.post('/login', async (c) => {
-  const { passcode } = await parseJsonBody(c, AdminLoginSchema);
-  const expected = c.env.ADMIN_PASSCODE || 'brightbuy2026';
-
-  if (!verifyPasscodeConstantTime(passcode, expected)) {
-    throw new AppError('Invalid admin passcode', 401);
-  }
-
-  await createAdminSessionCookie(c);
-  return c.json({ success: true, message: 'Admin session authenticated' });
-});
-
-adminRoutes.post('/logout', (c) => {
-  clearAdminSessionCookie(c);
-  return c.json({ success: true, message: 'Logged out' });
-});
-
-adminRoutes.get('/me', async (c) => {
-  const authenticated = await isValidAdminSession(c);
-  return c.json({ success: true, authenticated });
-});
-
-// Protect all routes below with Stage 1 Passcode Cookie Guard
+// All admin routes require verified Clerk JWT with ADMIN role
 adminRoutes.use('/*', adminAuthMiddleware);
 
 // Admin Products
@@ -126,6 +98,23 @@ adminRoutes.patch('/store-status', async (c) => {
   const service = new StoreService(db);
   const settings = await service.updateStatus(body);
   return c.json({ success: true, settings });
+});
+
+// Admin WhatsApp Integration Status & Test Alert
+adminRoutes.get('/whatsapp-status', (c) => {
+  const whatsapp = new WhatsAppService(c.env);
+  return c.json({
+    success: true,
+    configured: whatsapp.isConfigured(),
+  });
+});
+
+adminRoutes.post('/whatsapp-test', async (c) => {
+  const whatsapp = new WhatsAppService(c.env);
+  const result = await whatsapp.sendTextMessage(
+    '✅ *Bright Buy WhatsApp Test*\nYour admin order notification channel is connected and ready.'
+  );
+  return c.json({ success: true, ...result });
 });
 
 export default adminRoutes;

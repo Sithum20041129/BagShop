@@ -1,15 +1,33 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Search, User, Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { SignInButton, UserButton, useAuth, useUser } from '@clerk/react';
+import { api } from '@/lib/api';
 import { useCartStore } from '@/store/cart.store';
 import { cn } from '@/lib/utils';
 
 export function Navbar() {
   const navigate = useNavigate();
   const { items, openCart } = useCartStore();
+  const { isSignedIn, userId } = useAuth();
+  const { user } = useUser();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const totalCount = items.reduce((sum, i) => sum + i.quantity, 0);
+
+  // Sync Clerk user to D1 and read role (ADMIN vs CUSTOMER)
+  const { data: authData } = useQuery({
+    queryKey: ['auth-me', userId],
+    queryFn: api.getAuthMe,
+    enabled: Boolean(isSignedIn && userId),
+    staleTime: 60_000,
+  });
+
+  const metaRole = (user?.publicMetadata as { role?: string } | undefined)?.role;
+  const isAdmin =
+    isSignedIn &&
+    (authData?.user?.role === 'ADMIN' || metaRole?.toUpperCase() === 'ADMIN');
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     cn(
@@ -76,29 +94,43 @@ export function Navbar() {
           </NavLink>
         </nav>
 
-        {/* Right: Admin, Login Icon, Bag Icon (icon only + count) & Mobile Trigger */}
+        {/* Right: Admin (only if ADMIN), Login Icon / UserButton, Bag Icon */}
         <div className="flex items-center gap-4 shrink-0">
-          <NavLink
-            to="/admin"
-            className={({ isActive }) =>
-              cn(
-                'hidden md:inline text-xs uppercase tracking-[0.14em] transition-colors',
-                isActive ? 'text-[#1C1917] font-semibold' : 'text-[#78716C] hover:text-[#1C1917]'
-              )
-            }
-          >
-            Admin
-          </NavLink>
+          {isAdmin && (
+            <NavLink
+              to="/admin"
+              className={({ isActive }) =>
+                cn(
+                  'hidden md:inline text-xs uppercase tracking-[0.14em] transition-colors',
+                  isActive ? 'text-[#1C1917] font-semibold' : 'text-[#92400E] hover:text-[#1C1917]'
+                )
+              }
+            >
+              Admin
+            </NavLink>
+          )}
 
-          {/* Login / Sign In Icon (UI placeholder for Stage 2) */}
-          <button
-            type="button"
-            className="relative flex h-9 w-9 items-center justify-center rounded-sm text-[#1C1917] hover:bg-[#E7E5E4]/50 transition-colors cursor-pointer"
-            aria-label="Sign in or create account"
-            title="Login / Sign In"
-          >
-            <User className="h-[18px] w-[18px] stroke-[1.75]" />
-          </button>
+          {/* Clerk Auth: Sign In Icon when signed out, UserButton when signed in */}
+          {isSignedIn ? (
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: 'h-8 w-8 rounded-sm border border-[#E7E5E4]',
+                },
+              }}
+            />
+          ) : (
+            <SignInButton mode="modal">
+              <button
+                type="button"
+                className="relative flex h-9 w-9 items-center justify-center rounded-sm text-[#1C1917] hover:bg-[#E7E5E4]/50 transition-colors cursor-pointer"
+                aria-label="Sign in or create account"
+                title="Login / Sign In"
+              >
+                <User className="h-[18px] w-[18px] stroke-[1.75]" />
+              </button>
+            </SignInButton>
+          )}
 
           {/* Shopping Bag Icon Only (no "BAG" text) */}
           <button
@@ -167,13 +199,15 @@ export function Navbar() {
           >
             Track Order
           </Link>
-          <Link
-            to="/admin"
-            onClick={() => setMobileOpen(false)}
-            className="block text-xs uppercase tracking-widest text-[#78716C] py-1.5"
-          >
-            Admin Portal
-          </Link>
+          {isAdmin && (
+            <Link
+              to="/admin"
+              onClick={() => setMobileOpen(false)}
+              className="block text-xs uppercase tracking-widest text-[#92400E] py-1.5 font-medium"
+            >
+              Admin Portal
+            </Link>
+          )}
         </div>
       )}
     </header>

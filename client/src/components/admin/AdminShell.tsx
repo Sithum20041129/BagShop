@@ -1,5 +1,6 @@
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { Link, NavLink } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { useClerk } from '@clerk/react';
 import {
   LayoutDashboard,
   ShoppingBag,
@@ -28,8 +29,7 @@ export function AdminShell({
   title: string;
   children: React.ReactNode;
 }) {
-  const navigate = useNavigate();
-  const queryClient = useQueryClient();
+  const { signOut } = useClerk();
 
   const { data: storeData } = useQuery({
     queryKey: ['store-status'],
@@ -39,10 +39,8 @@ export function AdminShell({
   const isOpen = storeData?.settings?.isOpen ?? true;
 
   const handleLogout = async () => {
-    await api.adminLogout();
-    await queryClient.invalidateQueries({ queryKey: ['admin-me'] });
-    toast.success('Logged out of Admin Portal');
-    navigate('/admin/login');
+    toast.success('Signed out');
+    await signOut({ redirectUrl: '/' });
   };
 
   return (
